@@ -11,8 +11,8 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
         then: function () {
-            // include routes/API.php dengan prefix /app
-            Route::prefix('app')->group(base_path('routes/API.php'));
+            // include routes/API.php dengan prefix /api
+            Route::prefix('api')->group(base_path('routes/API.php'));
         }
     )
     ->withMiddleware(function (Middleware $middleware): void {
